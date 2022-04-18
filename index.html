@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filip Jordanoski</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="stylesheet" href="styles/background.css" />
+    <link rel="stylesheet" href="styles/stars.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/animate.css" />
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/jquery.transit.min.js"></script>
+    <script src="scripts/jquery.lettering.js"></script>
+    <script src="scripts/jquery.textillate.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navigation">
+        <ul>
+          <li><a href="#" id="aboutMeButton">About Me</a></li>
+          <li><a href="#" id="projectsButton">Projects</a></li>
+          <li><a href="#" id="skillsButton">Skills</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <div id="hello">
+        <div id="cat">
+          <span class="eyes left"></span>
+          <span class="eyes right"></span>
+          <span class="mouth"></span>
+        </div>
+        <div id="moon">
+          <span class="darkSpot"></span>
+          <span class="darkSpot"></span>
+          <span class="darkSpot"></span>
+          <span class="darkSpot"></span>
+        </div>
+      </div>
+      <div id="aboutMe" class="pContainer">
+        <p class="pInfo aboutMeP">
+Hi, I'm Filip</p>
+        <p class="pInfo aboutMeP">
+Front-end Developer
+        </p>
+        <p class="pInfo aboutMeP">
+I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.
+        </p>
+      </div>
+      <div id="projects" class="pContainer">
+        <p id="pProjects" class="pInfo">
+Currently working on them, for now you can enjoy the view :D
+        </p>
+        <button id="hideAll">click me</button>
+      </div>
+      <div id="skills">
+        <div class="skillContainer">
+          <span class="skillContainerDesc">HTML</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">CSS</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">JavaScript</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">jQuery</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">React</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">Git</span>
+        </div>
+      </div>
+    </main>
+    <button id="showAll">+</button>
+    <div id="stars"></div>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

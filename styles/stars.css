@@ -1,0 +1,64 @@
+#stars {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.star {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  animation: opacityAnim 1.5s ease;
+}
+
+.star::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+  animation: tailAnim 5s linear infinite;
+}
+
+@keyframes tailAnim {
+  0% {
+    width: calc(100% * 60);
+  }
+
+  25% {
+    width: calc(100% * 50);
+  }
+
+  50% {
+    width: calc(100% * 70);
+  }
+
+  75% {
+    width: calc(100% * 50);
+  }
+
+  100% {
+    width: calc(100% * 59);
+  }
+}
+
+
+@keyframes opacityAnim {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0% 50%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Desktop, Large Screen Styles */
+
+@media only screen and (min-width: 1601px) {
+  body {
+    background-size: 110% 110%;
+    font-size: 1.25em;
+  }
+}
+
+/* Laptop Screen Styles */
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+  body {
+    background-size: 110% 110%;
+    font-size: 1em;
+  }
+}
+
+/* iPad and Tablet Screen Styles */
+
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  body {
+    background-size: 125% 125%;
+    font-size: 0.8em;
+  }
+}
+
+/* Mobile Screen Styles */
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-size: 135% 135%;
+    font-size: 0.8em;
+  }
+
+  .aboutMeP {
+    margin: 5% auto;
+  }
+}
