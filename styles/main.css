@@ -3,13 +3,34 @@
 .pContainer {
   display: block;
   width: 100%;
-  height: fit-content;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   margin: auto;
+  overflow-y: auto;
+}
+
+.pContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pContainer::-webkit-scrollbar-track {
+  background: #f5cb5c;
+  border-radius: 0 10px 10px 0;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.pContainer::-webkit-scrollbar-thumb {
+  background: rgba(60, 60, 120);
+  border-radius: 0 10px 10px 0;
+
+}
+
+.pContainer::-webkit-scrollbar-thumb:hover {
+  background: rgb(12, 123, 125);
 }
 
 .pInfo {
@@ -18,6 +39,23 @@
   color: #f5cb5c;
   text-shadow: 0 0 3px #000000;
   padding: 1% 8%;
+  margin: auto 0;
+}
+
+.projectsH {
+  color: #f5cb5c;
+  text-shadow: 0 0 3px #000000;
+  font-size: 2em;
+  padding: 1% 8%;
+  margin: 10% 0 10px;
+}
+
+#projects {
+  height: 100%;
+}
+
+#pProjects {
+  padding: 6% 8% 0;
 }
 
 #cat {
@@ -195,10 +233,17 @@
 }
 
 .skillContainer:nth-child(5):before {
-  width: 55%;
-  border-radius: 10%/50%;
+  width: 77%;
+  border-radius: 9%/50%;
   animation: widthIncrease 2s ease;
 }
+
+.skillContainer:nth-child(6):before {
+  width: 80%;
+  border-radius: 8%/50%;
+  animation: widthIncrease 2s ease;
+}
+
 
 @keyframes widthIncrease {
   from {
@@ -251,6 +296,13 @@
   cursor: pointer;
   background: transparent;
 }
+
+@media screen and (min-height: 448px) {
+  #aboutMe {
+    height: fit-content;
+  }
+}
+
 
 /* Laptops, Small and Larger Screen Styles */
 
