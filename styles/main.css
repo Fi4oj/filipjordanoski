@@ -297,7 +297,7 @@
   background: transparent;
 }
 
-@media screen and (min-height: 448px) {
+@media screen and (min-height: 560px) {
   #aboutMe {
     height: fit-content;
   }
