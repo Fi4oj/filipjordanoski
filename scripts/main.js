@@ -1,24 +1,26 @@
 $("document").ready(function () {
   $("#navigation ul li").hide().slideDown(1000);
   $("#hello").hide().fadeIn(850);
-  $(".pInfo, .skillContainer, #hideAll, #showAll").hide();
+  $(".pInfo, .skillContainer, #hideAll, #showAll, #projects").hide();
 
   $("#aboutMeButton").on("click", function () {
     $(".skillContainer, #hello, #hideAll").fadeOut();
     retextillate("#pProjects", "none", "fadeOutDown", "out");
-    $(".aboutMeP").show();
+    $(".aboutMeP, .pContainer").show();
+    $("#projects").hide();
     retextillate(".aboutMeP", "bounceIn", "none", "in");
   });
   $("#projectsButton").on("click", function () {
     $("#hello, .skillContainer").fadeOut();
     retextillate(".aboutMeP", "none", "fadeOutDown", "out");
-    $("#pProjects").show();
+    $("#pProjects, #projects").show();
     $("#hideAll").slideDown();
-    retextillate("#pProjects", "bounceIn", "none", "in");
+    retextillate("#pProjects, .projectsH", "bounceIn", "none", "in");
   });
   $("#skillsButton").on("click", function () {
     $("#hello, #hideAll").fadeOut();
-    retextillate(".pInfo", "none", "fadeOutDown", "out");
+    $(".pContainer").hide();
+    retextillate(".pInfo, .projectsH", "none", "fadeOutDown", "out");
     $(".skillContainer").slideDown();
   });
 
