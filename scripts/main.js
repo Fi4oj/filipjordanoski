@@ -13,9 +13,14 @@ $("document").ready(function () {
   $("#projectsButton").on("click", function () {
     $("#hello, .skillContainer").fadeOut();
     retextillate(".aboutMeP", "none", "fadeOutDown", "out");
-    $("#pProjects, #projects").show();
+    $("#pProjects, #projects, .pInfo, .projectsTab").show();
     $("#hideAll").slideDown();
-    retextillate("#pProjects, .projectsH", "bounceIn", "none", "in");
+    retextillate(
+      "#pProjects, .projectsH, .projectsP",
+      "bounceIn",
+      "none",
+      "in"
+    );
   });
   $("#skillsButton").on("click", function () {
     $("#hello, #hideAll").fadeOut();
@@ -32,6 +37,73 @@ $("document").ready(function () {
   $("#showAll").on("click", function () {
     $(this).fadeOut(300);
     $("header, #main").fadeIn("slow");
+  });
+
+  let tabs = $(".projectsTab");
+  for (let i = 0; i < tabs.length; i++) {
+    $(tabs[i]).append(
+      "<div id='buttonHandler'><div class='indexDots'></div><button class='previousB'><</button><button class='nextB'>></button></div>"
+    );
+    $(tabs[i]).css({
+      left: i * 100 + "%",
+    });
+  }
+  for (let i = 0; i < tabs.length; i++) {
+    $(".indexDots").append("<span class='indexDot' numberId=" + i + "></span>");
+  }
+
+  let indexDots = $(".indexDot");
+
+  $(indexDots[0]).css("background", "green");
+
+  let currentPosition = 0;
+
+  indexDots.on("click", function (event) {
+    currentPosition = -Math.abs(event.target.getAttribute("numberid"));
+    for (var i = 0; i < tabs.length; i++) {
+      $(tabs[i]).animate({
+        left: (currentPosition + i) * 200 + "%",
+      });
+    }
+    $(indexDots).css("background", "transparent");
+    $(".indexDot[numberid='" + Math.abs(currentPosition) + "']").css(
+      "background",
+      "#008000"
+    );
+  });
+
+  $(".nextB").on("click", function () {
+    currentPosition--;
+    if (currentPosition <= -3) {
+      currentPosition = -3;
+    }
+    for (var i = 0; i < tabs.length; i++) {
+      $(tabs[i]).animate({
+        left: (currentPosition + i) * 200 + "%",
+      });
+    }
+    $(indexDots).css("background", "transparent");
+    $(".indexDot[numberid='" + Math.abs(currentPosition) + "']").css(
+      "background",
+      "#008000"
+    );
+  });
+
+  $(".previousB").on("click", function () {
+    currentPosition++;
+    if (currentPosition >= 0) {
+      currentPosition = 0;
+    }
+    for (var i = 0; i < tabs.length; i++) {
+      $(tabs[i]).animate({
+        left: (currentPosition + i) * 200 + "%",
+      });
+    }
+    $(indexDots).css("background", "transparent");
+    $(".indexDot[numberid='" + Math.abs(currentPosition) + "']").css(
+      "background",
+      "#008000"
+    );
   });
 });
 

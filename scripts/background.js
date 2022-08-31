@@ -27,7 +27,7 @@ $("document").ready(function () {
   var starSize;
   setInterval(function () {
     $("#stars").append("<span class='star' dataNum='" + starNum + "'></span");
-    starSize = randomInteger(1, 9);
+    starSize = randomInteger(1, 9) / randomInteger(1, 7);
     $("head").append(
       "<style> [dataNum='" +
         starNum +
