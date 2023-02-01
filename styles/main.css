@@ -538,7 +538,7 @@
 }
 
 
-@media only screen and (min-height: 568px){
+@media only screen and (min-height: 758px){
   .projectsTab {
     height: fit-content;
   }
