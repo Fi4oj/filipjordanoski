@@ -1,58 +1,66 @@
-$("document").ready(function () {
+$('document').ready(function () {
   var x = 0;
   var y = 50;
   setInterval(function () {
     if (x >= 0 && x <= 50 && y <= 50 && y > 0) {
-      x += 1;
-      y -= 1;
+      x += 0.1;
+      y -= 0.1;
+      x = Number(x.toFixed(2));
+      y = Number(y.toFixed(2));
     } else if (x >= 50 && x <= 100 && y >= 0 && y < 50) {
-      x += 1;
-      y += 1;
+      x += 0.1;
+      y += 0.1;
+      x = Number(x.toFixed(2));
+      y = Number(y.toFixed(2));
     } else if (x >= 50 && x <= 100 && y >= 50 && y < 100) {
-      x -= 1;
-      y += 1;
+      x -= 0.1;
+      y += 0.1;
+      x = Number(x.toFixed(2));
+      y = Number(y.toFixed(2));
     } else if (x <= 50 && x >= 0 && y <= 100 && y > 50) {
-      x -= 1;
-      y -= 1;
+      x -= 0.1;
+      y -= 0.1;
+      x = Number(x.toFixed(2));
+      y = Number(y.toFixed(2));
     }
-    $("body").animate(
+    $('body').animate(
       {
-        backgroundPositionX: x + "%",
-        backgroundPositionY: y + "%",
+        backgroundPositionX: x + '%',
+        backgroundPositionY: y + '%',
       },
-      200
+      1
     );
   }, 1);
   var starNum = 0;
   var starSize;
   setInterval(function () {
-    $("#stars").append("<span class='star' dataNum='" + starNum + "'></span");
+    $('#stars').append("<span class='star' dataNum='" + starNum + "'></span");
     starSize = randomInteger(1, 9) / randomInteger(1, 7);
-    $("head").append(
+    $('head').append(
       "<style> [dataNum='" +
         starNum +
         "'].star::before {width: " +
         starSize * 50 +
-        "px} </style>"
+        'px} </style>'
     );
     $(".star[dataNum='" + starNum + "']").css({
       width: starSize,
       height: starSize * 0.75,
       boxShadow:
-        "0 0 " +
+        '0 0 ' +
         starSize * 2 +
-        "px " +
+        'px ' +
         starSize +
-        "px rgb(" +
+        'px rgb(' +
         randomInteger(1, 255) +
-        "," +
+        ',' +
         randomInteger(1, 255) +
-        ", " +
+        ', ' +
         randomInteger(1, 255) +
-        ")",
-      top: randomInteger(-10, 110) + "%",
-      left: randomInteger(-10, 110) + "%",
-      transform: "rotate(" + randomInteger(1, 360) + "deg)",
+        ')',
+      top: randomInteger(-10, 110) + '%',
+      left: randomInteger(-10, 110) + '%',
+      transform: 'rotate(' + randomInteger(1, 360) + 'deg)',
     });
     var starSpeed;
     if (starSize <= 4) {
@@ -62,13 +70,13 @@ $("document").ready(function () {
     }
     $(".star[dataNum='" + starNum + "']").transition(
       {
-        rotate: "+=" + randomInteger(1, 10) + "deg",
+        rotate: '+=' + randomInteger(1, 10) + 'deg',
         x: -2500,
         y: 0,
       },
       {
         duration: starSpeed,
-        easing: "linear",
+        easing: 'linear',
         queue: false,
         complete: function () {
           $(this).remove();

@@ -322,38 +322,6 @@
   color: #f5cb5c;
 }
 
-#hideAll {
-  display: block;
-  width: 30%;
-  height: 7vh;
-  border: 5px solid rgba(249, 175, 28, 0.4);
-  background-color: rgb(41, 51, 92, 0.8);
-  border-radius: 20% / 40%;
-  position: relative;
-  margin: 10px auto;
-  cursor: pointer;
-  z-index: 1;
-  font-size: 1.2em;
-  font-weight: 559;
-  color: #f5cb5c;
-}
-
-.theButton {
-  display: block;
-  width: 30%;
-  height: 7vh;
-  border: 5px solid rgba(249, 175, 28, 0.4);
-  background-color: rgb(41, 51, 92, 0.8);
-  border-radius: 20% / 40%;
-  position: relative;
-  margin: 10px auto;
-  cursor: pointer;
-  z-index: 1;
-  font-size: 1.2em;
-  font-weight: 559;
-  color: #f5cb5c;
-}
-
 #showAll {
   display: block;
   position: fixed;
@@ -566,5 +534,12 @@
 
   .projectsTab {
     overflow-y: visible;
+  }
+}
+
+
+@media only screen and (min-height: 568px){
+  .projectsTab {
+    height: fit-content;
   }
 }
