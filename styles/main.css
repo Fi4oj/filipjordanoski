@@ -256,7 +256,7 @@
 .skillContainer::before {
   content: "";
   display: block;
-  background-color: rgb(41, 51, 92, 0.8);
+  background-color: rgba(51, 117, 92, 0.8);
   width: 50%;
   height: 85%;
   border-radius: 12%/50%;
@@ -420,7 +420,7 @@
     bottom: 0;
     right: 24.2%;
     margin: auto;
-    background-color: rgb(92, 103, 125, 0.2);
+    background-color: rgb(125, 133, 151, 0.1);
     border-radius: 10% 15% 15% 10%;
   }
 
