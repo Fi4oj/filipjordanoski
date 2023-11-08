@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filip Jordanoski</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="stylesheet" href="styles/background.css" />
+    <link rel="stylesheet" href="styles/stars.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/animate.css" />
+    <link rel="stylesheet" href="styles/buttons.css">
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="scripts/jquery.transit.min.js"></script>
+    <script src="scripts/jquery.lettering.js"></script>
+    <script src="scripts/jquery.textillate.js"></script>
+  </head>
+  <body>
+    <header id="header">
+      <nav id="navigation">
+        <ul>
+          <li><a href="#" id="aboutMeButton">About Me</a></li>
+          <li><a href="#" id="projectsButton">Projects</a></li>
+          <li><a href="#" id="skillsButton">Skills</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <div id="hello">
+        <div id="cat">
+          <span class="eyes left"></span>
+          <span class="eyes right"></span>
+          <span class="mouth"></span>
+        </div>
+        <div id="moon">
+          <span class="darkSpot"></span>
+          <span class="darkSpot"></span>
+          <span class="darkSpot"></span>
+          <span class="darkSpot"></span>
+        </div>
+      </div>
+      <div id="aboutMe" class="pContainer" style="display: none;">
+        <p class="pInfo aboutMeP">
+Hi, I'm Filip</p>
+        <p class="pInfo aboutMeP">
+A coding virtuoso, breathing life into creative visions one code line at a time.</p>
+        <p class="pInfo aboutMeP">
+I ensure seamless functionality and optimal user experience, delivering high-quality solutions and staying abreast of emerging technologies to build innovative and responsive web applications.</p>
+      </div>
+      <div id="projects" class="pContainer" style="display: none;">
+        <div class="pContainer projectsTab">
+          <h2 class="projectsH bouncez1">My Portfolio</h2>
+          <p class="pInfo projectsP bouncez1">
+For this project I used: HTML5, CSS3, JavaScript, jQuery. Each star has its own random size and color, the speed and the length of the tail depends on the size of the star. To see the whole background click the button below.</p>
+          <button id="hideAll" class="theButton">
+            <span></span>
+            <span></span>
+            The Button
+          </button>
+        </div>
+        <div class="pContainer projectsTab">
+          <h2 class="projectsH bouncez2">Food Order App</h2>
+          <p class="pInfo projectsP bouncez2">
+This project I built using React. Food ordering app where you can choose meals and add them to the cart. The meals are being stored in the cart where they are listed along with the amount they need to pay. You can adjust the amount of meals ordered by removing or adding more.</p>
+          <form action="https://jordanoski19.github.io/Food_Order_App/" method="get" target="_blank">
+            <button class="theButton">
+              <span></span>
+              <span></span>
+              The Button
+            </button>
+          </form>
+        </div>
+        <div class="pContainer projectsTab">
+          <h2 class="projectsH bouncez3">Expense Tracker</h2>
+          <p class="pInfo projectsP bouncez3">
+This project I built using React. You can add new expense with amount, title and date. Filter by year to see which month has the highest expense. To view the project, click the button below.</p>
+          <form action="https://jordanoski19.github.io/Expense_Tracker/" method="get" target="_blank">
+            <button class="theButton">
+              <span></span>
+              <span></span>
+              The Button
+            </button>
+          </form>
+        </div>
+        <div class="pContainer projectsTab">
+          <h2 class="projectsH bouncez4">Blog App</h2>
+          <p class="pInfo projectsP bouncez4">
+This project I built using React. You can add your username, age and the blog. You can delete the blog you don't like by clicking on the blog. To view the project, click the button below.</p>
+          <form action="https://jordanoski19.github.io/Blog_App/" method="get" target="_blank">
+            <button class="theButton">
+              <span></span>
+              <span></span>
+              The Button
+            </button>
+          </form>
+        </div>
+        <div class="pContainer projectsTab">
+          <h2 class="projectsH bouncez5">Course Goals</h2>
+          <p class="pInfo projectsP bouncez5">
+This project I built using React. You can add a course goal by writing the goal in the input field and clicking the button to add it. When you finish the goal, you can delete it by clicking on it. To view the project, click the button below.</p>
+          <form action="https://jordanoski19.github.io/Course_Goals/" method="get" target="_blank">
+            <button class="theButton">
+              <span></span>
+              <span></span>
+              The Button
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="skills" style="display: none;">
+        <div class="skillContainer">
+          <span class="skillContainerDesc">HTML</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">CSS</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">JavaScript</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">jQuery</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">C/C#/C++</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">Java</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">React</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">Angular</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">.NET</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">Spring Boot</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">Node.js</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">SQL</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">MongoDB</span>
+        </div>
+        <div class="skillContainer">
+          <span class="skillContainerDesc">Git</span>
+        </div>
+      </div>
+    </main>
+    <button id="showAll" style="display: none;">+</button>
+    <div id="stars"></div>
+    <div id="dust" style="width: 100vw; height: 100vh; background: transparent; pointer-events: none;"></div>
+    <script src="scripts/fireflies.js"></script>
+    <script>
+        (function() {
+            fireFlies({
+                "number_flies": 100,
+                "color": "#A0A0A0",
+                "elem": "#dust"
+            });
+        })();
+    </script>
+    <script src="scripts/background.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
