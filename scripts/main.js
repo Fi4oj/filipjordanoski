@@ -30,8 +30,8 @@ $("document").ready(function () {
   });
 
   $("#skillsButton").on("click", function () {
-    $("#hello, #hideAll").fadeOut();
-    $(".pContainer").hide();
+    retextillate(".aboutMeP", "none", "fadeOutDown", "out");
+    $("#hello, #hideAll, #projects").fadeOut();
     $("#skills").fadeIn();
   });
 
