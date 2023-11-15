@@ -1,0 +1,134 @@
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #cccccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 172px;
+  height: 43.2px;
+  padding: 3.6px 0;
+  box-sizing: border-box;
+  display: flex;
+  animation: l5-0 1.5s infinite steps(6);
+  border-radius: 10% / 50%;
+  background: linear-gradient(#000 0 0) 0 0/0% 100% no-repeat,
+    radial-gradient(circle 5.4px, #eeee89 90%, #0000) 0 0/20% 100% #000;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.loader::before {
+  content: "";
+  width: 36px;
+  transform: translate(-100%);
+  border-radius: 50%;
+  background: #ffff2d;
+  animation: l5-1 0.125s 0.153s infinite steps(5) alternate,
+    l5-2 1.5s infinite linear;
+}
+
+@keyframes l5-1 {
+  0% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0,
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      100% 65%,
+      100% 0,
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 35%
+    );
+  }
+}
+
+@keyframes l5-2 {
+  100% {
+    transform: translate(172px);
+  }
+}
+
+@keyframes l5-0 {
+  100% {
+    background-size: 120% 100%, 20% 100%;
+  }
+}
+
+.backLoader1 {
+  width: 150vw;
+  height: 150vh;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.01);
+  animation: loader 0.7s infinite alternate;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.01);
+  position: absolute;
+}
+
+.backLoader2 {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.03);
+  animation: loader 0.7s infinite alternate;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.03);
+  position: absolute;
+}
+
+.backLoader3 {
+  width: 50vw;
+  height: 50vh;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  animation: loader 0.7s infinite alternate;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.06);
+  position: absolute;
+}
+
+.backLoader4 {
+  width: 25vw;
+  height: 25vh;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  animation: loader 0.7s infinite alternate;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 100px 100px rgba(0, 0, 0, 0.08);
+  position: absolute;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

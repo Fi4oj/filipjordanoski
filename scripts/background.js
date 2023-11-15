@@ -1,3 +1,9 @@
+$(window).on("load", function () {
+  $(".loader-wrapper").fadeOut("slow", function () {
+    $(this).remove();
+  });
+});
+
 $("document").ready(function () {
   let x = 0;
   let y = 50;
@@ -94,7 +100,7 @@ $("document").ready(function () {
   function animate(time) {
     let deltaTime = time - lastUpdate;
 
-    if (deltaTime >= 500) {
+    if (deltaTime >= 1000) {
       createStar();
       lastUpdate = time;
     }

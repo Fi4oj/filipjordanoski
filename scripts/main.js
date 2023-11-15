@@ -4,7 +4,11 @@ $("document").ready(function () {
 
   let bounceInOneElement = 1;
   $("#aboutMeButton").on("click", function () {
-    $("#skills, #hello, #hideAll").fadeOut();
+    $("#aboutMe").css({ position: "relative", overflow: "auto" });
+    $("#hello").fadeOut("slow", function () {
+      $(this).remove();
+    });
+    $("#skills, #hideAll").fadeOut();
     $(
       ".indexDots, .nextB, .previousB, .theButton, .bouncez" +
         bounceInOneElement
@@ -14,8 +18,12 @@ $("document").ready(function () {
   });
 
   $("#projectsButton").on("click", function () {
-    $("#hello, #skills").fadeOut();
+    $("#hello").fadeOut("slow", function () {
+      $(this).remove();
+    });
+    $("#skills").fadeOut();
     retextillate(".aboutMeP", "none", "fadeOutDown", "out");
+    $("#aboutMe").css("position", "inherit");
     $(
       "#projects, .pContainer, .indexDots, .nextB, .previousB, .theButton, .bouncez" +
         bounceInOneElement
@@ -30,8 +38,12 @@ $("document").ready(function () {
   });
 
   $("#skillsButton").on("click", function () {
+    $("#aboutMe").css({ position: "inherit", overflow: "hidden" });
+    $("#hello").fadeOut("slow", function () {
+      $(this).remove();
+    });
     retextillate(".aboutMeP", "none", "fadeOutDown", "out");
-    $("#hello, #hideAll, #projects").fadeOut();
+    $("#hideAll, #projects").fadeOut();
     $("#skills").fadeIn();
   });
 
