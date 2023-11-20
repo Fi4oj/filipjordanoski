@@ -294,13 +294,13 @@
 }
 
 .skillContainer:nth-child(5):before {
-  width: 82%;
+  width: 89%;
   border-radius: 9%/50%;
   animation: widthIncrease 2s ease;
 }
 
 .skillContainer:nth-child(6):before {
-  width: 85%;
+  width: 89%;
   border-radius: 8%/50%;
   animation: widthIncrease 2s ease;
 }
